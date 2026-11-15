@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Laugh</title>
+    <link rel="stylesheet" href="GameOfLore.CSS">
+</head>
+<body>
+    <script>
+        const audio = localStorage.getItem('audioPlayed');
+        if (!audio) {
+            const audio = new Audio('./assets/maniacal_laugh.wav');
+            audio.play();
+            localStorage.setItem('audioPlayed', 'true');
+        }
+    </script>
+    <h1>Don't Laugh</h1>
+    <p>Even when you hear the sound don't laugh.</p>
+</body>
+</html>

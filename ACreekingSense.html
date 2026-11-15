@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Creeking Sense</title>
+    <link rel="stylesheet" href="GameOfLore.CSS">
+</head>
+<body>
+    <img id="image" src="./assets/dark_room_slow_rotate.gif" alt="Image">
+    <script>
+        const image = document.getElementById('image');
+        const clickSound = new Audio('./assets/creaking_sound.wav');
+        
+        image.addEventListener('click', () => {
+            clickSound.play();
+
+            text = document.createElement('p');
+            text.textContent = "Broken floorboards creaking, loud sounds, and fear";
+            document.body.appendChild(text);
+            if (text.textContent === "Broken floorboards creaking, loud sounds, and fear") {
+                setTimeout(() => {
+                    window.location.href = "DonotLaugh.html";
+                }, 600);
+            }
+        });</script>
+</body>
+</html>
